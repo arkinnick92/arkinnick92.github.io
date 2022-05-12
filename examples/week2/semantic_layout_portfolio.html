@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>Semantic Layout Portfolio Example</title>
+    <style>
+      body {
+        font-family: Verdana, sans-serif;
+        margin: 0px
+      }
+      header {
+        background-color: skyblue;
+        text-align: center;
+        padding-top: 48px;
+        padding-bottom: 24px;
+      }
+      header img {
+        border: 10px solid black;
+        border-radius: 50%;
+        width: 350px;
+      }
+      nav {
+        background-color: skyblue;
+        border-top: 4px solid white;
+      }
+      nav ul {
+        list-style-type: none;
+        padding: 0px;
+        margin: 0px;
+        text-align: center;
+      }
+      nav ul li {
+        display: inline-block;
+        margin: 0px 12px;
+        padding: 12px 8px;
+      }
+      nav ul li a {
+        color: black;
+        display: inline-block;
+        text-decoration: none;
+        width: 100%;
+      }
+      nav ul li:hover {
+        background-color: black;
+      }
+      nav ul li:hover a {
+        color: white;
+      }
+      nav ul li:active {
+        background-color: orange;
+      }
+      aside,
+      section {
+        display: inline-block;
+      }
+      aside {
+        padding-top: 12px;
+        vertical-align: top;
+        width: 25%;
+      }
+      section {
+        width: 70%
+      }
+      footer {
+        background-color: skyblue;
+        padding: 12px 24px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    	<header>
+        <img src="../../images/mountain_1.jpg" alt="mountians at sunset">
+        <h1>Mountain Top Games</h1>
+      </header>
+      <nav>
+        <ul>
+          <li><a href="#">Projects</a><li>
+          <li><a href="#">About</a><li>
+          <li><a href="#">Contact</a><li>
+        </ul>
+      </nav>
+      <main>
+        <aside>
+          <ol>
+            <li>Greeting</li>
+            <li> Conversation</li>
+            <li>Farewell</li>
+          </ol>
+        </aside>
+        <section>
+          <h2>General Outline</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+            nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
+            qui officia deserunt mollit anim id est laborum.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+            nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
+            qui officia deserunt mollit anim id est laborum.
+          </p>
+        </section>
+      </main>
+      <footer>This is a footer</footer>
+  </body>
+</html>
