@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>Layouts: Table vs. Float</title>
+    <style>
+      /* CSS common to both layout */
+      .header {
+        background-color: lightgreen;
+        padding: 12px 24px;
+      }
+      .nav {
+        padding: 12px 24px;
+      }
+      .content {
+        padding: 36px;
+      }
+      .footer {
+        background-color: green;
+        padding: 12px 24px;
+      }
+      img.mountain_1 {
+        float: right;
+        margin-left: 12px;
+        width: 250px;
+      }
+      img.mountain_2 {
+        float:left;
+        margin-right: 12px;
+        width: 250px;
+      }
+      .clear {
+        clear: both;
+        margin: 48px;
+      }
+      /* CSS specific to the Table Layout */
+      #oldTableLayout {
+        border-collapse: collapse;
+        margin-bottom: 48px;
+      }
+      #oldTableLayout .nav {
+        background-color: #DDFFDD;
+      }
+      /* Css specific to the Float Layout */
+      #oldFloatLayout .nav {
+        box-sizing: border-box;
+        float: left;
+        width: 20%;
+      }
+      #oldFloatLayout .content {
+        box-sizing: border-box;
+        float: left;
+        width: 80%;
+      }
+      #oldFloatLayout .main {
+        background: linear-gradient(to right, #DDFFDD 20%, white 20.0001%);
+      }
+      /* This is the clearfix */
+      #oldFloatLayout .main:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+    </style>
+  </head>
+  <body>
+    <table id="oldTableLayout">
+      <tr>
+        <td class="header" colspan="2">
+        <h1>This is how page layouts used to be done (with tables)</h1>
+        </td>
+      </tr>
+    <tr>
+      <td class="nav">
+        <div><a href="#">Home</a></div>
+        <div><a href="#">Gallery</a></div>
+        <div><a href="#">About Me</a></div>
+        <div><a href="#">Contact</a></div>
+      </td>
+        <td class="content">
+          <img class="mountain_1" src="../../images/mountain_1.jpg" alt="mountain 1">
+          <p>
+            Eiusmod qui magna mandaremus, si hic velit expetendis ad
+            quis vidisse ingeniis si ullamco cillum incurreret probant
+            de senserit dolor esse ex quorum a aut legam eiusmod
+            voluptatibus quo ex o aliqua dolor illum te ubi quid
+            constias. Incididunt tractavissent ne mandaremus, ab eram ea
+            illum, do legam in quid, cupidatat enim cernantur, fabulas
+            ne magna hic a ut arbitrantur ubi eu sint mandaremus,
+            quamquam iis veniam. Quamquam amet eu voluptate
+            fidelissimae.Nisi litteris aut minim nulla eu voluptate
+            nulla dolore est sunt. Iis sed nulla ullamco quo quibusdam
+            se amet nostrud. Multos incididunt graviterque an id enim
+            nostrud tractavissent. Id legam firmissimum.
+            </p>
+            <div class="clear"></div>
+            <img class="mountain_2" src="../../images/mountain_2.jpg" alt="mountain 2">
+            <p>
+              Occaecat do eram, aliquip multos nam nescius graviterque do
+              nam e anim incididunt, quorum ubi incididunt te amet.
+              Occaecat fugiat iudicem nostrud. Litteris amet quid
+              incurreret nisi.Eiusmod quorum quibusdam expetendis, vidisse
+              ex anim ne de minim ullamco non noster nam incurreret ne
+              quae sed quis tractavissent occaecat quid consequat ab
+              incididunt an deserunt et tempor est ex enim singulis,
+              quamquam sed appellat. Ab nulla adipisicing. Et et esse
+              mentitum, ne legam possumus consequat, commodo multos cillum
+              ad sunt, quis aliquip eu coniunctione.
+            </p>
+      </td>
+      </tr>
+      <tr>
+        <td class="footer" colspan="2">
+          copyright &copy; mountain mama
+        </td>
+      </tr>
+  </table>
+
+  <div id="oldFloatLayout">
+    <div class="header">
+      <h1>
+        This is how page layout used to be done.
+      </h1>
+    </div>
+      <div class="main">
+        <div class="nav">
+          <div><a href="#">Home</a></div>
+          <div><a href="#">Gallery</a></div>
+          <div><a href="#">About Me</a></div>
+          <div><a href="#">Contact</a></div>
+        </div>
+        <div class="content">
+          <img class="mountain_1" src="../../images/mountain_1.jpg" alt="mountain 1">
+          <p>
+            Eiusmod qui magna mandaremus, si hic velit expetendis ad
+            quis vidisse ingeniis si ullamco cillum incurreret probant
+            de senserit dolor esse ex quorum a aut legam eiusmod
+            voluptatibus quo ex o aliqua dolor illum te ubi quid
+            constias. Incididunt tractavissent ne mandaremus, ab eram ea
+            illum, do legam in quid, cupidatat enim cernantur, fabulas
+            ne magna hic a ut arbitrantur ubi eu sint mandaremus,
+            quamquam iis veniam. Quamquam amet eu voluptate
+            fidelissimae.Nisi litteris aut minim nulla eu voluptate
+            nulla dolore est sunt. Iis sed nulla ullamco quo quibusdam
+            se amet nostrud. Multos incididunt graviterque an id enim
+            nostrud tractavissent. Id legam firmissimum.
+            </p>
+            <div class="clear"></div>
+            <img class="mountain_2" src="../../images/mountain_2.jpg" alt="mountain 2">
+            <p>
+              Occaecat do eram, aliquip multos nam nescius graviterque do
+              nam e anim incididunt, quorum ubi incididunt te amet.
+              Occaecat fugiat iudicem nostrud. Litteris amet quid
+              incurreret nisi.Eiusmod quorum quibusdam expetendis, vidisse
+              ex anim ne de minim ullamco non noster nam incurreret ne
+              quae sed quis tractavissent occaecat quid consequat ab
+              incididunt an deserunt et tempor est ex enim singulis,
+              quamquam sed appellat. Ab nulla adipisicing. Et et esse
+              mentitum, ne legam possumus consequat, commodo multos cillum
+              ad sunt, quis aliquip eu coniunctione.
+            </p>
+          </div>
+        </div>
+    <div class="footer">copyright &copy; mountain mama</div>
+  </div>
+  </body>
+</html>
