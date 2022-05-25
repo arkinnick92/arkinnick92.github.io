@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>Grid Examples</title>
+    <style>
+      body {
+        font-family: Proxima Nova, Helvetica, Arial, sans-serif;
+      }
+      .myGrid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr, 1fr);
+        grid-auto-rows: minmax (100px, auto);
+        grid-gap: 10px;
+        grid-template-areas:
+          "myHeader myHeader myHeader"
+          "sidenav content1 picCol1"
+          "sidenav picCol2 content2"
+          "footer footer footer"
+      }
+      header {
+        background-color: lightgreen;
+        grid-area: myHeader;
+        padding: 36px;
+        text-align: center;
+      }
+      nav {
+        background-color: #DDFFDD;
+        grid-area: sidenav;
+        padding: 36px;
+      }
+      nav ul {
+        list-style: none;
+        margin: 8px;
+        padding: 8px;
+      }
+      nav ul li a {
+        color: black;
+        text-decoration: none;
+      }
+      #paragraph1 {
+        grid-area: content1;
+        padding: 24px;
+      }
+      #paragraph2 {
+        grid-area: content2;
+        padding: 24px;
+      }
+      #image1 {
+        grid-area: picCol1;
+        padding: 24px;
+      }
+      #image2 {
+        grid-area: picCol2;
+        padding: 24px;
+      }
+      img {
+        float: right;
+        width: 400px;
+      }
+      footer {
+        background-color: green;
+        color: white;
+        grid-area: footer;
+        padding: 24px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="myGrid">
+      <header>
+        <h1>This is how page layouts can be done with grids (and areas)</h1>
+      </header>
+      <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+      </nav>
+      <section id="paragraph1">
+        <p>
+          Eiusmod ex nisi quibusdam, consequat distinguantur de
+          doctrina aut nescius anim tempor aliquip quid, in fugiat
+          excepteur constias. Proident irure excepteur, magna non
+          commodo o e irure anim minim incididunt e laboris
+          familiaritatem eu proident, magna ubi hic veniam mentitum, o
+          arbitror eruditionem, quem ab occaecat in enim ad do eram
+          fore est admodum. Iis aliqua cernantur voluptate a hic
+          iudicem praesentibus. Qui occaecat id consequat, officia an
+          irure.Mandaremus eram cillum singulis quid. Voluptate minim
+          officia incurreret, export aliquip e tamen fore, pariatur
+          duis quem ea nisi, officia aute esse expetendis tempor. De
+          irure illustriora est dolor offendit nescius. Aute et
+          quamquam an multos ita in anim do export.
+        </p>
+      </section>
+        <div class="image1"><img src="../images/mountain_1.jpg"></div>
+      <section id="paragraph2">
+        <p>
+          Eiusmod ex nisi quibusdam, consequat distinguantur de
+          doctrina aut nescius anim tempor aliquip quid, in fugiat
+          excepteur constias. Proident irure excepteur, magna non
+          commodo o e irure anim minim incididunt e laboris
+          familiaritatem eu proident, magna ubi hic veniam mentitum, o
+          arbitror eruditionem, quem ab occaecat in enim ad do eram
+          fore est admodum. Iis aliqua cernantur voluptate a hic
+          iudicem praesentibus. Qui occaecat id consequat, officia an
+          irure.Mandaremus eram cillum singulis quid. Voluptate minim
+          officia incurreret, export aliquip e tamen fore, pariatur
+          duis quem ea nisi, officia aute esse expetendis tempor. De
+          irure illustriora est dolor offendit nescius. Aute et
+          quamquam an multos ita in anim do export.
+        </p>
+      </section>
+        <div class="image2"><img src="../images/mountain_2.jpg"></div>
+      <footer>This is a footer &copy 2022</footer>
+    </div>
+  </body>
+</html>

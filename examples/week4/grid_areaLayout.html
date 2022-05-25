@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>Grid Examples</title>
+    <style>
+      .myGrid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-rows: minmax (50px, auto);
+        grid-template-areas:
+          "myHeader myHeader myHeader"
+          "sidenav content content"
+      }
+      header {
+        background-color: lightgreen;
+        padding: 36px;
+        grid-area: myHeader;
+      }
+      nav {
+        background-color: #DDFFDD;
+        padding: 36px;
+        grid-area: sidenav;
+      }
+      main {
+        padding: 36px;
+        grid-area: content;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="myGrid">
+      <header>
+        <h1>This is how page layouts can be done with grids (and areas)</h1>
+      </header>
+      <nav>NAVIGATION GOES HERE</nav>
+      <main>
+        <p>
+          Eiusmod ex nisi quibusdam, consequat distinguantur de
+          doctrina aut nescius anim tempor aliquip quid, in fugiat
+          excepteur constias. Proident irure excepteur, magna non
+          commodo o e irure anim minim incididunt e laboris
+          familiaritatem eu proident, magna ubi hic veniam mentitum, o
+          arbitror eruditionem, quem ab occaecat in enim ad do eram
+          fore est admodum. Iis aliqua cernantur voluptate a hic
+          iudicem praesentibus. Qui occaecat id consequat, officia an
+          irure.Mandaremus eram cillum singulis quid. Voluptate minim
+          officia incurreret, export aliquip e tamen fore, pariatur
+          duis quem ea nisi, officia aute esse expetendis tempor. De
+          irure illustriora est dolor offendit nescius. Aute et
+          quamquam an multos ita in anim do export.
+        </p>
+        <p>
+          Eiusmod ex nisi quibusdam, consequat distinguantur de
+          doctrina aut nescius anim tempor aliquip quid, in fugiat
+          excepteur constias. Proident irure excepteur, magna non
+          commodo o e irure anim minim incididunt e laboris
+          familiaritatem eu proident, magna ubi hic veniam mentitum, o
+          arbitror eruditionem, quem ab occaecat in enim ad do eram
+          fore est admodum. Iis aliqua cernantur voluptate a hic
+          iudicem praesentibus. Qui occaecat id consequat, officia an
+          irure.Mandaremus eram cillum singulis quid. Voluptate minim
+          officia incurreret, export aliquip e tamen fore, pariatur
+          duis quem ea nisi, officia aute esse expetendis tempor. De
+          irure illustriora est dolor offendit nescius. Aute et
+          quamquam an multos ita in anim do export.
+        </p>
+      </main>
+    </div>
+  </body>
+</html>
