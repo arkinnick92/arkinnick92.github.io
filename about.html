@@ -8,8 +8,18 @@
         <title>Andrew Kinnick Portfolio</title>
         <style>
           body {
+            background-color: black;
+            color: white;
             font-family: Proxima Nova, Helvetica, Arial, sans-serif;
             margin: 0px
+          }
+          .flexContainer {
+            display: flex;
+            padding: 10%;
+            padding-top: 50px;
+          }
+          .flexGrow1 {
+            flex-grow: 1;
           }
           #myName {
             padding: 0;
@@ -20,70 +30,146 @@
             font-size: 30px;
             margin-top: 0px;
           }
-          #floatRight {
-            float: left;
-            margin-right: 15px;
-          }
-          .imageSize {
-            height: 260px;
-            margin: 10px;
-          }
           header {
             background-color: #5eb293;
             background-size: auto;
-            color: white;
+            color: black;
             font-family: Proxima Nova, Helvetica, Arial, sans-serif;
             font-size: 21px;
-            height: 175px;
-            text-align: center;
+            height: 400px;
             padding-top: 50px;
             padding-bottom: 20px;
+            text-align: center;
+            background-image: url("images/web-banner.png");
+            /* background-size: contain; */
+            background-position: top right;
+            height: 400px;
+            position: relative;
+          }
+          #logo {
+            height: 220px;
+            width: 130px;
+            margin-bottom: 15px;
           }
           nav {
-            color: white;
             font-family: Proxima Nova, Helvetica, Arial, sans-serif;
             font-size: 21px;
             padding: 5px 20px;
           }
           nav ul {
             list-style: none;
-            padding: 0;
             margin: 0;
+            padding: 0;
           }
           nav ul li {
-            margin: 0 15px;
             display: inline-block;
+            margin: 0 15px;
           }
           nav ul li a {
-            color: white;
+            color: black;
             text-decoration: none;
           }
           nav ul li a:hover {
-            background-color: #5eb293;
-            color: black;
+            color: white;
           }
           nav ul li a:active {
-            background-color: #5eb293;
-            color: black;
+            color: white;
           }
           main {
-            margin: 5%;
+            margin: 5px;
           }
           h3 {
             text-align: center;
-            margin-bottom: 10px;
-
+            margin-bottom: 0px;
+            padding-bottom: 0px;
+          }
+          h4 {
+            font-size: 24px;
+          }
+          img {
+            float: left;
+            height: 400px;
+            margin: 30px;
+          }
+          section {
+            margin: 2px;
           }
           footer {
             background-color: #5eb293;
-            color: white;
             padding: 12px 24px;
-            text-align: center
+            text-align: center;
           }
+
+
+          @media screen and (min-width: 480px) and (max-width: 799px) {
+            header {
+              font-size: 18px;
+            }
+            #myTitle {
+              font-size: 25px;
+            }
+            nav {
+              font-size: 18px;
+            }
+            img {
+              float: left;
+              height: 300px;
+              margin: 30px;
+            }
+            .flexContainer {
+              display: flex;
+              padding: 5%;
+              padding-top: 25px;
+            }
+            #mediumScreen {
+              background-color: darkgreen;
+              color: white;
+            }
+            #largeScreen,
+            #smallScreen {
+              background-color: grey;
+              color: grey;
+            }
+          }
+            @media screen and (max-width: 479px) {
+              header {
+                font-size: 14px;
+              }
+              #myTitle {
+                font-size: 20px;
+              }
+              nav {
+                font-size: 16px;
+              }
+              img {
+                float: left;
+                height: 225px;
+                margin: 30px;
+              }
+              .flexContainer {
+                display: flex;
+                padding: 5%;
+                padding-top: 5px;
+              }
+              #smallScreen {
+                background-color: blue;
+                color: white;
+              }
+              #largeScreen,
+              #mediumScreen {
+                background-color: grey;
+                color: grey;
+              }
+              footer {
+                display: none;
+              }
+            }
+
       </style>
       </head>
       <body>
         <header id="header">
+          <img id="logo" src="images/personal-logo_web.png">
           <h1 id="myName">Andrew Kinnick</h1>
           <h2 id="myTitle">Graphic Design Services</h2>
           <nav id="nav">
@@ -95,9 +181,11 @@
               </ul>
           </nav>
       </header>
-      <main id="main">
+      <div>
           <h3>About</h3>
-            <img id="floatRight" class="imageSize"
+          <main class="flexContainer">
+            <section class="flexGrow1">
+            <img
                 src="images/andrew_kinnick_about_photo.png"
                 alt="a picture of me, Andrew Kinnick"/>
             <h4>
@@ -113,15 +201,17 @@
               and achieve the client's design goals.
             </p>
             <p>
-              In my free time, I like to keep busy with actives such as recording a video 
+              In my free time, I like to keep busy with actives such as recording a video
               game podcast, and participating in a book club.
             </p>
             <p>
               I also like meeting new people. Feel free to reach out at arkinnick@icloud.com
             </p>
+          </section>
+          </main>
+        </div>
           <div class="section"></div>
           <div class="section"></div>
-        </main>
-        <footer id="footer">FOOTER</footer>
+        <footer id="footer">Andrew Kinnick Portfolio</footer>
       </body>
     </html>
