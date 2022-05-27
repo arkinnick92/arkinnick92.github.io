@@ -8,14 +8,14 @@
       }
       .myGrid {
         display: grid;
-        grid-template-columns: repeat(3, 1fr, 1fr);
-        grid-auto-rows: minmax (100px, auto);
+        grid-template-columns: repeat(5, 1fr);
+        grid-auto-rows: minmax(100px, auto);
         grid-gap: 10px;
         grid-template-areas:
-          "myHeader myHeader myHeader"
-          "sidenav content1 picCol1"
-          "sidenav picCol2 content2"
-          "footer footer footer"
+          "myHeader myHeader myHeader myHeader myHeader"
+          "sidenav content1  content1 content1 picCol1"
+          "sidenav picCol2 content2 content2 content2"
+          "footer footer footer footer footer"
       }
       header {
         background-color: lightgreen;
@@ -61,7 +61,7 @@
         background-color: green;
         color: white;
         grid-area: footer;
-        padding: 24px;
+        padding: 42px;
         text-align: center;
       }
     </style>
