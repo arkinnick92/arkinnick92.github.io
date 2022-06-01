@@ -29,7 +29,6 @@
       padding-bottom: 20px;
       text-align: center;
       background-image: url("images/web-banner.png");
-      /* background-size: contain; */
       background-position: top right;
       height: 400px;
       position: relative;
@@ -80,6 +79,48 @@
       padding: 12px 24px;
       text-align: center;
     }
+
+    @media screen and (min-width: 480px) and (max-width: 799px) {
+      header {
+        font-size: 18px;
+      }
+      #myTitle {
+        font-size: 25px;
+      }
+      nav {
+        font-size: 18px;
+      }
+      #mediumScreen {
+        background-color: darkgreen;
+        color: white;
+      }
+      #largeScreen,
+      #smallScreen {
+        background-color: grey;
+        color: grey;
+      }
+    }
+      @media screen and (max-width: 479px) {
+        header {
+          font-size: 14px;
+        }
+        #myTitle {
+          font-size: 20px;
+        }
+        nav {
+          font-size: 16px;
+        }
+        #smallScreen {
+          background-color: blue;
+          color: white;
+        }
+        #largeScreen,
+        #mediumScreen {
+          background-color: grey;
+          color: grey;
+        }
+      }
+
   </style>
   </head>
   <body>

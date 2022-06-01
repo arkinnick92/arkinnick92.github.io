@@ -13,12 +13,12 @@
         align-items: center;
         display: grid;
         justify-items: center;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(4, 1fr);
         grid-auto-rows: minmax (100px, auto);
         grid-template-areas:
-          "myHeader myHeader"
-          "content content"
-          "content content"
+          ". myHeader myHeader ."
+          ". content content ."
+          ". content content ."
       }
       #myName {
         padding: 0;
@@ -91,6 +91,63 @@
         padding: 12px 24px;
         text-align: center;
       }
+
+      @media screen and (min-width: 800px) {
+        .myGrid {
+          align-items: center;
+          display: grid;
+          justify-items: center;
+          grid-template-columns: repeat(2, 1fr);
+          grid-auto-rows: minmax (100px, auto);
+          grid-template-areas:
+            "myHeader myHeader"
+            "content content"
+            "content content"
+        }
+      }
+
+      @media screen and (min-width: 480px) and (max-width: 799px) {
+        header {
+          font-size: 18px;
+        }
+        #myTitle {
+          font-size: 25px;
+        }
+        nav {
+          font-size: 18px;
+        }
+        .imageSize {
+          height: 200px;
+          padding: 5px;
+        }
+      }
+        @media screen and (max-width: 479px) {
+          .myGrid {
+            align-items: center;
+            display: grid;
+            justify-items: center;
+            grid-template-columns: repeat(3, 1fr);
+            grid-auto-rows: minmax (100px, auto);
+            grid-template-areas:
+              ". myHeader ."
+              ". content ."
+              ". content ."
+          }
+          header {
+            font-size: 14px;
+          }
+          #myTitle {
+            font-size: 20px;
+          }
+          nav {
+            font-size: 16px;
+          }
+          .imageSize {
+            height: 150px;
+            padding: 5px;
+          }
+        }
+
   </style>
   </head>
   <body>

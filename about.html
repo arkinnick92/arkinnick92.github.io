@@ -41,15 +41,14 @@
             padding-bottom: 20px;
             text-align: center;
             background-image: url("images/web-banner.png");
-            /* background-size: contain; */
             background-position: top right;
             height: 400px;
             position: relative;
           }
           #logo {
             height: 220px;
-            width: 130px;
             margin-bottom: 15px;
+            width: 130px;
           }
           nav {
             font-family: Proxima Nova, Helvetica, Arial, sans-serif;
@@ -86,7 +85,7 @@
           h4 {
             font-size: 24px;
           }
-          img {
+          #pictureOfMyself {
             float: left;
             height: 400px;
             margin: 30px;
@@ -100,7 +99,6 @@
             text-align: center;
           }
 
-
           @media screen and (min-width: 480px) and (max-width: 799px) {
             header {
               font-size: 18px;
@@ -111,7 +109,7 @@
             nav {
               font-size: 18px;
             }
-            img {
+            #pictureOfMyself {
               float: left;
               height: 300px;
               margin: 30px;
@@ -141,7 +139,7 @@
               nav {
                 font-size: 16px;
               }
-              img {
+              #pictureOfMyself {
                 float: left;
                 height: 225px;
                 margin: 30px;
@@ -159,9 +157,6 @@
               #mediumScreen {
                 background-color: grey;
                 color: grey;
-              }
-              footer {
-                display: none;
               }
             }
 
@@ -185,7 +180,7 @@
           <h3>About</h3>
           <main class="flexContainer">
             <section class="flexGrow1">
-            <img
+            <img id="pictureOfMyself"
                 src="images/andrew_kinnick_about_photo.png"
                 alt="a picture of me, Andrew Kinnick"/>
             <h4>

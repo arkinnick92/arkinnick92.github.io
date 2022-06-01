@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>Transitions Example</title>
+    <style>
+      #transition1 {
+        transition-property: color;
+        transition-duration: 1s;
+        transition-delay: 0.5s;
+      }
+      #transition1:hover {
+        color: red;
+      }
+      #box {
+        box-sizing: border-box;
+        height: 200px;
+        width: 200px;
+        background-color: red;
+        transition:
+          background-color 1s,
+          border-radius 1s;
+      }
+      #box:hover {
+        background-color: blue;
+        border-radius: 50%;
+      }
+      img {
+        width: 300px;
+        padding-top: 10px;
+        transition: transform 1s;
+      }
+      img:hover {
+        transform: scale(3) rotate(360deg);
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="transition1">
+      This is a basic transition.
+    </h1>
+    <div id="box"></div>
+    <img src="../../images/mountain_1.jpg">
+    <p>
+      De ipsum e duis, expetendis malis quae appellat enim aut
+      aliquip veniam incididunt, commodo se dolor litteris,
+      quibusdam summis commodo, iudicem magna incurreret, iis
+      consequat ex arbitror nam do minim aliqua si laboris. An qui
+      nulla fugiat quis de multos mandaremus a exquisitaque.
+      Arbitror tempor commodo eiusmod.Anim hic sed noster
+      occaecat, culpa doctrina te aliqua quem. Iis tamen duis quem
+      vidisse, non enim culpa eram senserit, dolor admodum ne
+      excepteur in anim consequat e dolor labore, o constias an
+      arbitror, sint ubi ubi enim possumus et noster ubi vidisse
+      hic tempor, te appellat ad excepteur. Aut dolor multos
+      fugiat excepteur se duis tractavissent incididunt fugiat
+      expetendis. Quae ab sed velit incurreret hic fore doctrina
+      quo vidisse aut duis cupidatat te senserit non fore et
+      quibusdam.
+    </p>
+  </body>
+</html>
