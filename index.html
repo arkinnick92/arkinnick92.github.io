@@ -10,8 +10,8 @@
       margin: 0px
     }
     #myName {
-      padding: 0;
       margin: 0;
+      padding: 0;
     }
     #myTitle {
       font-weight: normal;
@@ -20,6 +20,8 @@
     }
     header {
       background-color: #5eb293;
+      background-image: url("images/web-banner.png");
+      background-position: top right;
       background-size: auto;
       color: black;
       font-family: Proxima Nova, Helvetica, Arial, sans-serif;
@@ -27,15 +29,12 @@
       height: 400px;
       padding-top: 50px;
       padding-bottom: 20px;
-      text-align: center;
-      background-image: url("images/web-banner.png");
-      background-position: top right;
-      height: 400px;
       position: relative;
+      text-align: center;
     }
     #logo {
-      width: 130px;
       margin-bottom: 15px;
+      width: 130px;
     }
     nav {
       font-family: Proxima Nova, Helvetica, Arial, sans-serif;
@@ -62,13 +61,22 @@
       color: white;
     }
     main {
-      grid-area: content;
-      margin: 5%;
-      padding:16px;
-    }
-    h3 {
-      grid-area: myHeader;
+      background-image: url(images/landing-page-background-image.png);
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      height: 810px;
+      position: relative;
       text-align: center;
+    }
+    #mainText {
+      font-size: 35px;
+      font-style: italic;
+      margin-top: 5%;
+      margin-left: 25%;
+      margin-right: 25%;
+      padding: 5%;
+      text-shadow: 6px 6px 8px #000000;
     }
     .imageSize {
       height: 250px;
@@ -76,8 +84,14 @@
     }
     footer {
       background-color: #5eb293;
+      background-size: auto;
       padding: 12px 24px;
+      position: absolute;
       text-align: center;
+      width: auto;
+      bottom: 0;
+      right: 0;
+      left: 0;
     }
 
     @media screen and (min-width: 480px) and (max-width: 799px) {
@@ -90,16 +104,15 @@
       nav {
         font-size: 18px;
       }
-      #mediumScreen {
-        background-color: darkgreen;
-        color: white;
-      }
-      #largeScreen,
-      #smallScreen {
-        background-color: grey;
-        color: grey;
+      #mainText {
+        font-size: 30px;
+        margin-top: 10%;
+        margin-left: 15%;
+        margin-right: 15%;
+        padding: 5%;
       }
     }
+
       @media screen and (max-width: 479px) {
         header {
           font-size: 14px;
@@ -110,14 +123,12 @@
         nav {
           font-size: 16px;
         }
-        #smallScreen {
-          background-color: blue;
-          color: white;
-        }
-        #largeScreen,
-        #mediumScreen {
-          background-color: grey;
-          color: grey;
+        #mainText {
+          font-size: 25px;
+          margin-top: 10%;
+          margin-left: 10%;
+          margin-right: 10%;
+          padding: 5%;
         }
       }
 
@@ -138,10 +149,11 @@
       </nav>
   </header>
   <main id="main">
-      <h3>MAIN SECTION</h3>
+      <br>
+      <h2 id="mainText">- Working with you to deliver creative solutions to meet your unique design needs.</h2>
       <div class="section">SUBSECTION 1</div>
       <div class="section">SUBSECTION 2</div>
     </main>
-    <footer id="footer">Andrew Kinnick Portfolio</footer>
+    <footer id="footer">copyright &copy;2022 Andrew Kinnick</footer>
   </body>
 </html>

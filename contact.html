@@ -20,6 +20,8 @@
     }
     header {
       background-color: #5eb293;
+      background-image: url("images/web-banner.png");
+      background-position: top right;
       background-size: auto;
       color: black;
       font-family: Proxima Nova, Helvetica, Arial, sans-serif;
@@ -27,12 +29,9 @@
       height: 400px;
       padding-top: 50px;
       padding-bottom: 20px;
-      text-align: center;
-      background-image: url("images/web-banner.png");
-      /* background-size: contain; */
-      background-position: top right;
-      height: 400px;
       position: relative;
+      text-align: center;
+
     }
     #logo {
       width: 130px;
@@ -63,12 +62,13 @@
       color: white;
     }
     main {
-      grid-area: content;
       margin: 5%;
       padding:16px;
     }
     h3 {
+      font-size: 28px;
       grid-area: myHeader;
+      margin-top: 0px;
       text-align: center;
     }
     .imageSize {
@@ -77,9 +77,48 @@
     }
     footer {
       background-color: #5eb293;
+      background-size: auto;
       padding: 12px 24px;
+      position: absolute;
       text-align: center;
+      width: auto;
+      bottom: 0;
+      right: 0;
+      left: 0;
     }
+
+    @media screen and (min-width: 480px) and (max-width: 799px) {
+      header {
+        font-size: 18px;
+      }
+      #myTitle {
+        font-size: 25px;
+      }
+      nav {
+        font-size: 18px;
+      }
+      h3 {
+        font-size: 25px;
+        margin-top: 30px;
+      }
+    }
+
+      @media screen and (max-width: 479px) {
+        header {
+          font-size: 14px;
+        }
+        #myTitle {
+          font-size: 20px;
+        }
+        nav {
+          font-size: 16px;
+        }
+        h3 {
+          font-size: 25px;
+          margin-top: 25px;
+        }
+      }
+
     </style>
     </head>
     <body>
@@ -97,10 +136,10 @@
       </nav>
     </header>
     <main id="main">
-      <h3>MAIN SECTION</h3>
+      <h3>Contact</h3>
       <div class="section">SUBSECTION 1</div>
       <div class="section">SUBSECTION 2</div>
     </main>
-    <footer id="footer">Andrew Kinnick Portfolio</footer>
+    <footer id="footer">copyright &copy;2022 Andrew Kinnick</footer>
     </body>
     </html>

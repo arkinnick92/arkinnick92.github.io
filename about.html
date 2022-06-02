@@ -32,6 +32,8 @@
           }
           header {
             background-color: #5eb293;
+            background-image: url("images/web-banner.png");
+            background-position: top right;
             background-size: auto;
             color: black;
             font-family: Proxima Nova, Helvetica, Arial, sans-serif;
@@ -39,11 +41,8 @@
             height: 400px;
             padding-top: 50px;
             padding-bottom: 20px;
-            text-align: center;
-            background-image: url("images/web-banner.png");
-            background-position: top right;
-            height: 400px;
             position: relative;
+            text-align: center;
           }
           #logo {
             height: 220px;
@@ -79,7 +78,9 @@
           }
           h3 {
             text-align: center;
+            font-size: 28px;
             margin-bottom: 0px;
+            margin-top: 85px;
             padding-bottom: 0px;
           }
           h4 {
@@ -95,8 +96,14 @@
           }
           footer {
             background-color: #5eb293;
+            background-size: auto;
             padding: 12px 24px;
+            position: absolute;
             text-align: center;
+            width: auto;
+            bottom: 0;
+            right: 0;
+            left: 0;
           }
 
           @media screen and (min-width: 480px) and (max-width: 799px) {
@@ -119,16 +126,12 @@
               padding: 5%;
               padding-top: 25px;
             }
-            #mediumScreen {
-              background-color: darkgreen;
-              color: white;
-            }
-            #largeScreen,
-            #smallScreen {
-              background-color: grey;
-              color: grey;
+            h3 {
+              font-size: 25px;
+              margin-top: 60px;
             }
           }
+
             @media screen and (max-width: 479px) {
               header {
                 font-size: 14px;
@@ -149,14 +152,9 @@
                 padding: 5%;
                 padding-top: 5px;
               }
-              #smallScreen {
-                background-color: blue;
-                color: white;
-              }
-              #largeScreen,
-              #mediumScreen {
-                background-color: grey;
-                color: grey;
+              h3 {
+                font-size: 25px;
+                margin-top: 50px;
               }
             }
 
@@ -207,6 +205,6 @@
         </div>
           <div class="section"></div>
           <div class="section"></div>
-        <footer id="footer">Andrew Kinnick Portfolio</footer>
+        <footer id="footer">copyright &copy;2022 Andrew Kinnick</footer>
       </body>
     </html>
