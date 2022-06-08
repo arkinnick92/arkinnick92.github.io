@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>Assignment 14</title>
+      <style>
+        body {
+          color: #000046;
+          font-family: Tahoma, Arial, sans-serif;
+          margin: 0px;
+          padding: 0px;
+          text-shadow: 2px 2px 8px #c0d3f1;
+        }
+        form {
+          background-image: url("../images/tim_the_enchanter.jpeg");
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+          border-radius: 40px;
+          padding: 40px;
+        }
+        fieldset {
+          border: 5px solid #000046;
+          border-radius: 40px;
+          padding: 40px;
+        }
+        .formSection {
+          margin-bottom: 50px;
+        }
+        h2 {
+          margin-bottom: 0px;
+        }
+        .textInput label {
+          display: block;
+        }
+        .textInput input {
+          margin: 4px 0px 12px 0px;
+          padding: 8px;
+          width: 200px;
+        }
+        .textInput input:focus-visible {
+          outline: 0;
+          background-color: #7DF9FF;
+        }
+        #firstFieldContainer input {
+          border: 4px solid #000046;
+          border-radius: 50px;
+        }
+        #secondFieldContainer input {
+          border: 4px solid #000046;
+          border-radius: 50px;
+        }
+        #thirdFieldContainer input {
+          border: 4px solid #000046;
+          border-radius: 50px;
+        }
+        #buttonContainer input[type=submit] {
+          border: 0;
+          border-radius: 40px;
+          color: white;
+          margin-top: 10px;
+          margin-bottom: 10px;
+          padding: 12px 48px;
+          text-shadow: 2px 2px 14px #000000;
+          cursor: pointer;
+          background: linear-gradient(to bottom, #7DF9FF, #000046);
+        }
+        #buttonContainer input[type=submit]:active {
+          background: linear-gradient(to top, #7DF9FF, #000046);
+        }
+      </style>
+  </head>
+  <body>
+
+    <form action="submission_action.php">
+      <fieldset>
+        <legend>I am Legend</legend>
+        <section class="formSection">
+          <h2>3 Input Tags Of Type "Text"</h2>
+          <p>Each with a different name attribute!</p>
+          <div id="firstFieldContainer" class="textInput">
+            <label for="firstFieldId">What Is Your Quest?:</label>
+            <input type="text" id="firstFieldId" name="firstField">
+          </div>
+          <div id="secondFieldContainer" class="textInput">
+            <label for="secondFieldId">What Is Your Favorite Color?:</label>
+            <input type="text" id="secondFieldId" name="secondField">
+          </div>
+          <div id="thirdFieldContainer" class="textInput">
+            <label for="thirdFieldId">What Is The Airspeed Velocity Of An Unladen Swallow?:</label>
+            <input type="text" id="thirdFieldId" name="thirdField">
+          </div>
+        </section>
+
+        <section class="formSection">
+          <div>
+            <h2>3 Input Tags Of Type "Radio"</h2>
+            <p>With identical name attributes and different value attributes!</p>
+            <input type="radio" id="firstRadio" name="program"
+            value="first">
+            <label for="firstRadio">
+              The Earth Is Round
+            </label>
+          </div>
+          <div>
+            <input type="radio" id="secondRadio" name="program"
+            value="second">
+            <label for="secondRadio">
+              The Earth Is Flat
+            </label>
+          </div>
+          <div>
+            <input type="radio" id="thirdRadio" name="program"
+            value="third">
+            <label for="thirdRadio">
+              The Earth Is Hollow
+            </label>
+          </div>
+        </section>
+
+        <section class="formSection">
+          <div id="buttonContainer">
+            <h2>1 Input Tag Of Type "Submit"</h2>
+            <p>With a value attribure to specify the button text!</p>
+            <input type="submit" value="This will submit this form and destroy the world!">
+          </div>
+        </section>
+      </fieldset>
+    </form>
+
+  </body>
+</html>
