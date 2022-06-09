@@ -35,11 +35,59 @@
         border: 3px solid gray;
       }
       header {
+        align-items: center;
+        display: flex;
         grid-area: header;
+        justify-content: space-around;
       }
       header h1 {
+        color: #114761;
         display: inline-block;
         font-family: 'Montaga', serif;
+        font-size: 50px;
+        padding: 20px;
+        text-shadow: 3px 3px 8px #888;
+      }
+      #shieldImage {
+        padding: 20px;
+      }
+      #shieldImage:hover {
+        animation: spin 1.25s infinite;
+      }
+      @keyframes spin {
+        0% {
+          transform: scaleX(1);
+        }
+        50% {
+          transform: scaleX(-1);
+        }
+        100% {
+          transform: scaleX(1);
+        }
+      }
+      form {
+        margin-top: 10px;
+      }
+      #socialSection {
+        padding: 20px;
+        text-align: right;
+      }
+      #searchBar {
+        border: 0;
+        border-radius: 5px;
+        box-shadow: 2px 2px 8px #888;
+        color: #888;
+        margin-right: 5px;
+        padding: 4px;
+        width: 145px;
+      }
+      #searchButton {
+        background-color: #114761;
+        border-radius: 5px;
+        box-shadow: 2px 2px 8px #888;
+        color: white;
+        padding: 2px;
+        width: 65px;
       }
       nav {
         grid-area: navbar;
@@ -47,10 +95,10 @@
       }
       nav ul {
         display: flex;
+        justify-content: space-between;
         list-style-type: none;
         margin: 0px;
         padding: 0px;
-        justify-content: space-between;
       }
       nav ul li a {
         color: black;
@@ -87,8 +135,8 @@
         padding: 24px;
       }
       #moreAppearancesContainer h3 {
-        font-family: 'Montaga', serif;
         color: white;
+        font-family: 'Montaga', serif;
       }
       .yellow {
         color: #dbbf73;
@@ -108,8 +156,8 @@
         padding: 24px;
       }
       #moreAppearancesContainer2 h3 {
-        font-family: 'Montaga', serif;
         color: white;
+        font-family: 'Montaga', serif;
       }
       .blue {
         color: #7DF9FF;
@@ -123,11 +171,11 @@
         font-family: Verdana, Geneva, sans-serif;
       }
       #nextPubImgSize {
-        width: 70px;
-        height: auto;
-        float: left;
-        margin: 0 20px 20px 0;
         border: 1px solid #39382e;
+        float: left;
+        height: auto;
+        margin: 0 20px 20px 0;
+        width: 70px;
       }
       main {
         background-color: #D3D3D3;
@@ -177,14 +225,19 @@
             "bottom";
         }
         header {
+          flex-direction: column;
           text-align: center;
         }
         header h1 {
           display: block;
         }
+        #socialSection {
+          text-align: center;
+        }
         nav ul {
-          flex-direction: column;
           align-items: center;
+          flex-direction: column;
+          font-size: 24px;
         }
         #cardsContainer {
           flex-direction: column;
@@ -200,11 +253,17 @@
   <body>
     <div id="gridLayout">
       <header>
-        <img src="../../images/shield-spin.png">
+        <img src="../../images/shield-spin.png" id="shieldImage" alt="lannister shield icon">
         <h1>GEORGE R. R. MARTIN</h1>
-        <img src="../../images/facebook-overall.png" class="socialMediaIcons" alt="facebook icon">
-        <img src="../../images/twitter-overall.png" class="socialMediaIcons" alt="twitter icon">
-        <img src="../../images/app-overall.png" class="socialMediaIcons" alt="app overall icon">
+        <div id="socialSection">
+          <img src="../../images/facebook-overall.png" class="socialMediaIcons" alt="facebook icon">
+          <img src="../../images/twitter-overall.png" class="socialMediaIcons" alt="twitter icon">
+          <img src="../../images/app-overall.png" class="socialMediaIcons" alt="app overall icon">
+          <form>
+            <input type="text" id="searchBar" placeholder="SEARCH" name="searchBar">
+            <input type="submit" id="searchButton" value="Search">
+          </form>
+        </div>
       </header>
       <nav>
         <ul>
@@ -230,17 +289,17 @@
           <h3>NEXT APPEARANCE</h3>
           <p class="yellow">August 26 -28th, 2022</p>
           <p><span class="underline white">Bubonicaon 53</span><span class="white"> Guest</span></p>
-          <img src="../../images/more-appearances.jpeg" alt="more appearances">
+          <img src="../../images/more-appearances.png" alt="more appearances">
         </div>
         <div id="moreAppearancesContainer2">
           <h3>NEXT PUBLICATION</h3>
-          <img src="../../images/wildcards2022001_cvr-scaled.jpeg" id="nextPubImgSize">
+          <img src="../../images/wildcards2022001_cvr-scaled.jpeg" id="nextPubImgSize" alt="more apperances">
           <p class="blue">June 15, 2022</p>
           <p><span class="white2">WILD CARDS MARVEL COMIC BOOK 1</span><span class="gray"><br>(Comic Monthly)</span></p>
           <img src="../../images/more-appearances.png" alt="more appearances">
         </div>
-        <img src="../../images/valyrian-steel-v3.jpeg">
-        <img src="../../images/stagecoach-v2.jpeg">
+        <img src="../../images/valyrian-steel-v3.jpeg" alt="valyrian steel">
+        <img src="../../images/stagecoach-v2.jpeg" alt="stage coach">
       </aside>
       <main>
         <h2>CURRENT GRRM BLOG POSTS</h2>
@@ -272,7 +331,7 @@
         <p>I look around, and I don’t know where 2021 went.   I blinked and it was gone.
           Not a year that I am going to mourn much, any more than 2020.  A global pandemic,
           so many deaths (including friends of mine,… Read more »</p>
-          <img src="../../images/not-a-blog.png" id="notABlog">
+          <img src="../../images/not-a-blog.png" id="notABlog" alt ="visit not a blog">
       </main>
       <footer>&copy; 2022 GEORGE R.R. MARTIN. ALL RIGHTS RESERVED.</footer>
       <div id="bottom"></div>
