@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>COUNTDOWN</title>
+    <style>
+      body {
+        background-color: #0b1f40;
+        margin: 0px;
+      }
+      #hero {
+        background-image: url("../images/star_background.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        font-family: Proxima Nova, Helvetica, Arial, sans-serif;
+        height: 500px;
+        padding-top: 75px;
+        position: relative;
+        text-align: center;
+        text-shadow: 8px 8px 12px #000000;
+      }
+      #hero img {
+        height: 200px;
+        margin-top: 0px;
+        padding-top: 0px;
+      }
+      h1 {
+        color: white;
+        display: block;
+        font-size: 40px;
+      }
+      #countdownTitle {
+        font-size: 64px;
+        font-style: italic;
+        margin-bottom: 15px;
+      }
+      #countdown {
+        display: inline-block;
+        margin-top: 0px;
+      }
+      main {
+        background-image: url("../images/spaceman.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 700px;
+        padding: 20px;
+      }
+      main h2 {
+        color: white;
+        font-family: Proxima Nova, Helvetica, Arial, sans-serif;
+        font-size: 50px;
+        font-style: italic;
+        padding-top: 200px;
+        text-align: center;
+        text-shadow: 6px 6px 8px #000000;
+      }
+
+      @media screen and (min-width: 480px) and (max-width: 799px) {
+        #hero {
+          padding-top: 50px;
+        }
+        #hero img {
+          height: 175px;
+        }
+        h1 {
+          font-size: 30px;
+        }
+        #countdownTitle {
+          font-size: 54px;
+        }
+        main h2 {
+          font-size: 45px;
+        }
+      }
+
+        @media screen and (max-width: 479px) {
+          #hero {
+            padding-top: 50px;
+            text-shadow: 6px 6px 10px #000000;
+          }
+          #hero img {
+            height: 165px;
+          }
+          h1 {
+            font-size: 25px;
+          }
+          #countdownTitle {
+            font-size: 44px;
+          }
+          main h2 {
+            font-size: 35px;
+            padding-top: 220px;
+          }
+        }
+
+    </style>
+  </head>
+  <body>
+    <div id="hero">
+      <img src="../images/lost_ark_logo.png">
+      <h1 id="countdownTitle">Time until graduation</h1>
+      <h1 id="countdown">Countdown timer</h1>
+    </div>
+    <main>
+      <h2>To Infinity and Beyond</h2>
+    </main>
+    <script type="text/javascript">
+      let deadline = new Date('January 01, 2023 12:00:00');
+      let countdown = document.getElementById("countdown");
+      countdown.innerHTML = "";
+
+      function setCountdown() {
+        let now = new Date();
+        // # of milliseconds between deadline and now
+        let timeLeft = deadline.getTime() - now.getTime();
+
+        let days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+        let hours = Math.floor(
+          (timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+        );
+        let minutes = Math.floor(
+          (timeLeft % (1000 * 60 * 60)) / (1000 * 60)
+        );
+        let seconds = Math.floor(
+          (timeLeft % (1000 * 60)) / 1000
+        );
+
+
+        countdown.innerHTML =
+          `${days} days ${hours} hours ` +
+          `${minutes} minutes ${seconds} seconds left`;
+
+
+      }
+
+      setInterval(setCountdown, 1000);
+
+    </script>
+  </body>
+</html>

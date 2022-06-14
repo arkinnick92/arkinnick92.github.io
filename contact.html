@@ -66,11 +66,46 @@
       padding:16px;
       padding-bottom: 125px;
     }
+    main div {
+      margin-top: 0px;
+      margin-bottom: 18px;
+      margin-left: 40%;
+      margin-right: 40%;
+    }
+    #nameContainer input {
+      width: 300px;
+    }
+    #emailContainer input {
+      width: 300px;
+    }
+    textarea {
+      color: #949494;
+      font-family: Proxima Nova, Helvetica, Arial, sans-serif;
+      height: 100px;
+      padding: 5px;
+      width: 300px;
+    }
     h3 {
       font-size: 28px;
       grid-area: myHeader;
       margin-top: 0px;
       text-align: center;
+    }
+    #buttonContainer input[type=submit] {
+      background-color: #5eb293;
+      background-image: url("images/web-banner.png");
+      border: 0;
+      border-radius: 8px;
+      color: white;
+      font-size: 16px;
+      padding: 12px 48px;
+      text-shadow: 2px 2px 14px #000000;
+      cursor: pointer;
+      background-color: #5eb293;
+    }
+    #buttonContainer input[type=submit]:active {
+      color: black;
+      text-shadow: none;
     }
     .imageSize {
       height: 250px;
@@ -96,6 +131,13 @@
       nav {
         font-size: 18px;
       }
+      main div {
+        margin-left: 30%;
+        margin-right: 30%;
+      }
+      textarea {
+        width: 300px;
+      }
       h3 {
         font-size: 25px;
         margin-top: 30px;
@@ -111,6 +153,19 @@
         }
         nav {
           font-size: 16px;
+        }
+        main div {
+          margin-left: 15%;
+          margin-right: 15%;
+        }
+        #nameContainer input {
+          width: 250px;
+        }
+        #emailContainer input {
+          width: 250px;
+        }
+        textarea {
+          width: 250px;
         }
         h3 {
           font-size: 25px;
@@ -136,8 +191,24 @@
     </header>
     <main id="main">
       <h3>Contact</h3>
-      <div class="section">SUBSECTION 1</div>
-      <div class="section">SUBSECTION 2</div>
+      <div id="nameContainer" class="textInput">
+        <label for="nameId">Name *</label>
+        <br>
+        <input type="text" id="nameId" name="name">
+      </div>
+      <div id="emailContainer" class="textInput">
+        <label for="emailId">Email Adress *</label>
+        <br>
+        <input type="text" id="emailId" name="email">
+      </div>
+      <div id="messageContainer" class="textInput">
+        <label for="messageId">Message *</label>
+        <br>
+        <textarea id="messageId" name="message">Your Message...</textarea>
+      </div>
+      <div id="buttonContainer">
+        <input type="submit" value="Submit">
+      </div>
     </main>
     <footer id="footer">copyright &copy;2022 Andrew Kinnick</footer>
     </body>
