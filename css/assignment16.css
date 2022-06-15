@@ -1,0 +1,19 @@
+#slideshow {
+  height: 600px;
+  text-align: center;
+}
+.slideshowImage {
+  border-radius: 20px;
+  box-shadow: 8px 8px 14px #000000;
+  margin: 100px;
+  height: 450px;
+}
+body {
+  background-image: url(../images/ocean_background.jpg);
+  background-size: cover;
+  background-repeat: repeat;
+  background-position: center;
+  position: relative;
+  text-align: center;
+  text-align: center;
+}
