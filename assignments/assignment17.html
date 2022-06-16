@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>Assignment 17</title>
+      <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
+              integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI="
+              crossorigin="anonymous">
+      </script>
+    <style>
+      body {
+        background-image: url("../images/brickwall_background.jpg");
+        background-size: cover;
+        background-repeat: repeat;
+        background-position: center;
+        font-family: Tahoma, Arial, sans-serif;
+        height: 1000px;
+      }
+      body h1 {
+        color: white;
+        font-size: 60px;
+        text-shadow: 5px 5px 12px #000000;
+      }
+      body h2 {
+        color: white;
+        font-size: 75px;
+        margin-bottom: 5px;
+        text-align: center;
+        text-shadow: 3px 3px 12px #000000;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      .popupTrigger {
+        color: white;
+        cursor: pointer;
+        font-size: 50px;
+        text-align: center;
+        text-shadow: 2px 2px 10px #000000;
+      }
+      #popupContainer {
+        display: none;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vw;
+      }
+      #popupContainer.popupOpen {
+        display: flex;
+      }
+      #popupBackground {
+        background-image: url("../images/kool-aid_man.png");
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+      }
+      #popup {
+        background-color: white;
+        background-image: url("../images/giphy.gif");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        border: 3px solid black;
+        border-radius: 24px;
+        box-shadow: 6px 6px 8px #000000;
+        padding: 36px;
+        position: relative;
+        text-align: center;
+        min-width: 400px;
+        z-index: 1;
+      }
+      #popup .closePopup {
+        color: white;
+        cursor: pointer;
+        margin-top: 40px;
+        text-decoration: underline;
+        text-shadow: 3px 3px 12px #000000;
+      }
+      main {
+        background-color: white;
+        border-radius: 20px;
+        box-shadow: 6px 6px 8px #000000;
+        font-size: 18px;
+        margin: 45px;
+        padding: 45px;
+        text-align: center;
+      }
+      main h3 {
+        font-size: 35px;
+        margin-top: 0px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Hello there!</h2>
+    <div class="popupTrigger">Click on me to open a popup</div>
+    <div id="popupContainer">
+      <div id="popupBackground" class="closePopup"></div>
+      <div id="popup">
+        <div><h1>OHHHHH YEAHHHH!!!</h1></div>
+        <div class="closePopup">Close</div>
+      </div>
+    </div>
+    <main>
+      <h3>Important Article</h3>
+      <p>Se elit occaecat possumus a cillum litteris nam officia, in
+        aliqua magna eram expetendis an aut in labore aliqua quorum,
+        est enim export veniam ullamco, aut culpa commodo constias,
+        irure vidisse mandaremus, voluptate legam ea officia
+        comprehenderit. Probant tempor dolor appellat export,
+        incididunt fore fabulas possumus, do sunt enim quem nostrud,
+        nam veniam ubi duis, sed tempor doctrina ab a ubi
+        despicationes ut cillum singulis id efflorescere iis quo
+        tempor constias. Id o fidelissimae.Nulla de iudicem qui
+        quid, nisi fabulas a noster quem ne se e quid arbitror si
+        ita malis expetendis occaecat. Quis probant id fugiat anim.
+        Fore possumus exercitation, o quorum eram eu singulis.</p>
+      <p>
+        De duis mandaremus iudicem sed est tamen voluptate proident
+        in excepteur multos enim cupidatat enim hic velit ingeniis
+        officia se commodo cillum export do esse ne aut sunt export
+        enim admodum, elit probant aut quibusdam, quae cernantur ne
+        senserit. Do ex sunt quae fugiat a a iis cohaerescant est ut
+        commodo hic senserit est quo noster labore illum nostrud.
+        Ullamco anim appellat eu et deserunt reprehenderit, a ubi
+        comprehenderit qui laboris quorum eu nescius
+        transferrem.Doctrina culpa e vidisse concursionibus ut a
+        quamquam transferrem, ipsum pariatur sed dolor tamen si
+        veniam officia te praetermissum. Laboris quae quamquam
+        nescius a ita ita illum officia. Labore commodo iudicem a
+        qui duis culpa aliqua occaecat, cillum se aliquip aut quem,
+        pariatur nam labore de ubi tempor aut ipsum, nulla ingeniis
+        eruditionem, eiusmod ex tempor, offendit concursionibus ita
+        deserunt. Ita ex malis aliquip.
+      </p>
+      <p>
+        Admodum quorum admodum, officia duis eiusmod mandaremus e
+        appellat veniam duis qui aute, tamen admodum ita quae
+        fugiat. Non anim eram ad officia. E noster cupidatat
+        offendit, e sed quid labore dolor, possumus nisi possumus
+        iis ubi velit esse se vidisse.Iudicem familiaritatem ab
+        officia an legam quibusdam ab concursionibus, ita ex nisi
+        nescius ita an ipsum philosophari. Quid expetendis et
+        nescius. Probant ea illum singulis, quae non ad dolor
+        laboris se quae quo e quem quibusdam iis in labore fore in
+        fabulas.
+      </p>
+    </main>
+
+    <script type="text/javascript">
+      $(".popupTrigger").click(
+        function() {
+          $("#popupContainer").addClass("popupOpen");
+        }
+      );
+      $(".closePopup").click(
+        function() {
+          $("#popupContainer").removeClass("popupOpen");
+        }
+      );
+
+    </script>
+
+  </body>
+</html>
