@@ -48,8 +48,11 @@
         margin-bottom: 15px;
       }
       nav {
+        display: flex;
+        flex-wrap: wrap;
         font-family: Proxima Nova, Helvetica, Arial, sans-serif;
         font-size: 21px;
+        justify-content: center;
         padding: 5px 20px;
       }
       nav ul {
@@ -72,19 +75,23 @@
         color: white;
       }
       main {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
         grid-area: content;
-        margin: 2.25%;
+        margin: 60px;
         padding: 16px;
         padding-bottom: 125px;
       }
       h3 {
         font-size: 28px;
         grid-area: myHeader;
-        margin-top: 0px;
+        margin-top: 50px;
+        margin-bottom: 0px;
         text-align: center;
       }
       .imageSize {
-        height: 250px;
+        width: 450px;
         padding: 10px;
       }
       footer {
@@ -118,12 +125,8 @@
         #myTitle {
           font-size: 25px;
         }
-        nav {
-          font-size: 18px;
-        }
         .imageSize {
-          height: 200px;
-          padding: 5px;
+          padding: 10px;
         }
         h3 {
           font-size: 25px;
@@ -148,12 +151,9 @@
           #myTitle {
             font-size: 20px;
           }
-          nav {
-            font-size: 16px;
-          }
           .imageSize {
-            height: 150px;
-            padding: 5px;
+            width: 300px;
+            padding: 10px;
           }
           h3 {
             font-size: 25px;
@@ -178,13 +178,25 @@
       </nav>
   </header>
   <div class="myGrid">
+    <h3>Gallery</h3>
   <main id="main">
-      <h3>Gallery</h3>
         <img class="imageSize" src="images/hephaestus_logo.png" alt="hephaestus winery logo"/>
         <img class="imageSize" src="images/noclip_logo_presentation.png" alt="noclip podcast logo"/>
-        <br>
         <img class="imageSize" src="images/the-book-of-mothman-logo.png" alt="the book of mothman logo"/>
         <img class="imageSize" src="images/pool-shark-games-logo.png" alt="pool shark games logo"/>
+        <img class="imageSize" src="images/lost_ark_logo_web.png" alt="lost ark logo"/>
+        <img class="imageSize" src="images/Photoshop_Collage_Project.png" alt="surreal collage"/>
+        <img class="imageSize" src="images/Jaguars and Other Game_Cover_Andrew Kinnick.png" alt="jaguars and other game book cover"/>
+        <img class="imageSize" src="images/wishtree_cover_1.png" alt="wishtree book cover 1"/>
+        <img class="imageSize" src="images/wishtree_cover_2.png" alt="wishtree book cover 2"/>
+        <img class="imageSize" src="images/minimal_movie_poster_1.png" alt="jumanji movie poster 1"/>
+        <img class="imageSize" src="images/minimal_movie_poster_2.png" alt="jumanji movie poster 2"/>
+        <img class="imageSize" src="images/AKinnick_W13D4_P3---Titles-Poster-Project.jpg" alt="neverending stoy movie poster"/>
+        <img class="imageSize" src="images/AKinnick_W10D4_P1---Product-Photography---Product-photoshoot-PRINT-Ad.jpg" alt="frog prince winery ad"/>
+        <img class="imageSize" src="images/AndrewKinnick_Tshirt.jpg" alt="mcdonald's dada tshirt 1"/>
+        <img class="imageSize" src="images/AndrewKinnick_Tshirt_2.jpg" alt="mcdonald's dada tshirt 2"/>
+        <img class="imageSize" src="images/W15_P4---Cut-up_Smoothie-Label-Design-Project.jpg" alt="frog prince winery ad"/>
+        <img class="imageSize" src="images/AKinnick_W11D4_P1---Portrait-Photoshoot-Editing_edit.jpg" alt="mcdonald's dada tshirt 1"/>
     </main>
   </div>
     <footer id="footer">copyright &copy;2022 Andrew Kinnick</footer>
