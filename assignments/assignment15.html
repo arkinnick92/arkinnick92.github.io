@@ -13,16 +13,21 @@
         background-repeat: no-repeat;
         background-position: center;
         font-family: Proxima Nova, Helvetica, Arial, sans-serif;
-        height: 500px;
+        height: 450px;
+        padding-left: 120px;
+        padding-right: 120px;
         padding-top: 75px;
         position: relative;
         text-align: center;
-        text-shadow: 8px 8px 11px #000000;
+        text-shadow: 6px 6px 10px #000000;
       }
       #hero img {
         height: 200px;
         margin-top: 0px;
         padding-top: 0px;
+      }
+      #logoDropShadow {
+        box-shadow: 6px 6px 10px #000000;
       }
       h1 {
         color: white;
@@ -30,13 +35,14 @@
         font-size: 40px;
       }
       #countdownTitle {
-        font-size: 64px;
+        font-size: 50px;
         font-style: italic;
-        margin-bottom: 15px;
+        margin-bottom: 10px;
+        margin-top: 20px;
       }
       #countdown {
         display: inline-block;
-        margin-top: 0px;
+        margin-bottom: 0px;
       }
       main {
         background-image: url("../images/spaceman.png");
@@ -98,15 +104,15 @@
   </head>
   <body>
     <div id="hero">
-      <img src="../images/lost_ark_logo.png">
-      <h1 id="countdownTitle">Time until graduation</h1>
+      <img id="logoDropShadow"src="../images/personal-logo_web_white.png">
       <h1 id="countdown">Countdown timer</h1>
+      <h1 id="countdownTitle">untill the end of Graphic Design and Web Development</h1>
     </div>
     <main>
       <h2>To Infinity and Beyond</h2>
     </main>
     <script type="text/javascript">
-      let deadline = new Date('January 01, 2023 12:00:00');
+      let deadline = new Date('September 13, 2022 23:00:00');
       let countdown = document.getElementById("countdown");
       countdown.innerHTML = "";
 
