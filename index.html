@@ -176,14 +176,38 @@
       width: auto;
     }
 
-    @media screen and (min-width: 800px) and (max-width: 5000px) {
+    @media screen and (min-width: 992px) and (max-width: 10000px) {
 
+      #mainText {
+        margin-left: 28%;
+        margin-right: 28%;
+      }
       #imageSize {
         width: 300px;
         padding-right: 0px;
       }
       .container {
         padding: 10px;
+      }
+    }
+
+    @media screen and (min-width: 800px) and (max-width: 991px) {
+
+      #mainText {
+        margin-left: 20%;
+        margin-right: 20%;
+      }
+      #imageSize {
+        width: 300px;
+        padding-right: 0px;
+      }
+      #imageSize {
+        width: 300px;
+        padding-right: 60px;
+      }
+      .container {
+        padding: 10px;
+        padding-top: 25px;
       }
     }
 
@@ -213,7 +237,7 @@
         padding-top: 20px;
       }
       #imageSize {
-        width: 200px;
+        width: 250px;
         padding-right: 0px;
       }
       .container {
